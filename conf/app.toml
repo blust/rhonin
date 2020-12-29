@@ -1,0 +1,54 @@
+[http]
+host = ""
+port = 58089
+#开启性能分析
+pprof = 1
+
+[core]
+#上下文初始化
+context_init = 1
+#异常恢复中间件
+recovery = 1
+
+[log]
+app = "./logs/bw.log"
+
+[-mysql]
+host = "127.0.0.1"
+port = 3341
+user = "root"
+password = "123456"
+database = "******"
+
+conn_min = 3
+conn_max = 10
+
+
+[-redis]
+#address = "127.0.0.1:6379"
+address = "127.0.0.1:6379"
+auth = "******"
+database = 0
+
+conn_min = 3
+conn_max = 10
+
+# 序号id从0开始
+[-mysql-cluster.0]
+id = 0
+host = "127.0.0.1"
+port = 3341
+user = "root"
+password = "123456"
+database = "******"
+conn_min = 3
+conn_max = 10
+[-mysql-cluster.1]
+id = 1
+host = "127.0.0.1"
+port = 3342
+user = "root"
+password = "123456"
+database = "******"
+conn_min = 3
+conn_max = 10
